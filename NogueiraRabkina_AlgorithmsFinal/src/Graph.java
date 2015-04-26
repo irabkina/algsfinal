@@ -31,7 +31,7 @@ public class Graph {
 		Graph toReturn = new Graph();
 		HashMap<Integer, ArrayList<Integer>> vals = new HashMap<Integer, ArrayList<Integer>>();
 		for(Entry<Integer, ArrayList<Integer>> entry : this.getEdges().entrySet()){
-			vals.put(entry.getKey(), entry.getValue()); //alskdfjds;
+			vals.put(entry.getKey(), entry.getValue()); 
 		}
 		
 		toReturn.setEdges(vals);
