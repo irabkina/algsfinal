@@ -61,8 +61,8 @@ public class PerformCalculation extends Thread {
 	
 	public static void main(String args[]){
 		Graph test = new Graph();
-		test.setNumEdges(4);
-		test.setNumVertices(4);
+		test.setNumEdges(5);
+		test.setNumVertices(5);
 		
 		HashMap<Integer, ArrayList<Integer>> map = new HashMap<Integer, ArrayList<Integer>>();
 		ArrayList<Integer> one = new ArrayList<Integer>();
@@ -75,17 +75,87 @@ public class PerformCalculation extends Thread {
 		map.put(2,two);
 		ArrayList<Integer> three = new ArrayList<Integer>();
 		three.add(2);
-		three.add(4);
+		three.add(5);
 		map.put(3,three);
 		ArrayList<Integer> four = new ArrayList<Integer>();
 		four.add(1);
-		four.add(3);
+		four.add(5);
 		map.put(4,four);
+		ArrayList<Integer> five = new ArrayList<Integer>();
+		five.add(3);
+		five.add(4);
+		map.put(5,five);
 		
 		test.setEdges(map);
+		
+		
+		/*Graph test = new Graph();
+		test.setNumEdges(12);
+		test.setNumVertices(8);
+		
+		HashMap<Integer, ArrayList<Integer>> map = new HashMap<Integer, ArrayList<Integer>>();
+		ArrayList<Integer> one = new ArrayList<Integer>();
+		one.add(2);
+		one.add(5);
+		one.add(6);
+		map.put(1,one);
+		ArrayList<Integer> two = new ArrayList<Integer>();
+		two.add(1);
+		two.add(7);
+		two.add(8);
+		map.put(2,two);
+		ArrayList<Integer> three = new ArrayList<Integer>();
+		three.add(4);
+		three.add(7);
+		three.add(8);
+
+		map.put(3,three);
+		ArrayList<Integer> four = new ArrayList<Integer>();
+		four.add(3);
+		four.add(5);
+		four.add(6);
+		map.put(4,four);
+		
+		
+		ArrayList<Integer> five = new ArrayList<Integer>();
+		five.add(1);
+		five.add(4);
+		five.add(7);
+		map.put(5,five);
+		ArrayList<Integer> six = new ArrayList<Integer>();
+		six.add(1);
+		six.add(4);
+		six.add(8);
+		map.put(6,six);
+		ArrayList<Integer> seven = new ArrayList<Integer>();
+		seven.add(2);
+		seven.add(3);
+		seven.add(5);
+		map.put(7,seven);
+		ArrayList<Integer> eight = new ArrayList<Integer>();
+		eight.add(2);
+		eight.add(6);
+		eight.add(3);
+
+		map.put(8,eight);
+		
+		
+		
+		test.setEdges(map);*/
+		
 		PerformCalculation p = new PerformCalculation(test);
 		p.run();
-		System.out.println(polyNumbers);
+		HashMap<Integer, Integer> form3 = new HashMap<Integer,Integer>();
+		for(Integer n : polyNumbers){
+			if (form3.containsKey(n)){
+				int num = form3.get(n)+1;
+				form3.put(n, num);
+			}
+			else{
+				form3.put(n,1);
+			}
+		}
+		System.out.println(form3);
 	}
 	
 }
