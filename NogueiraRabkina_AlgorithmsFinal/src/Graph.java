@@ -119,7 +119,7 @@ public class Graph {
 		System.out.println(testContract2.isComplete());
 //		System.out.println(testContract2.numVertices);
 //		System.out.println(testContract2.numEdges);
-//		System.out.println(testContract2.edges);
+//		System.out.println(testContract2.edges);l
 	}
 
 }
