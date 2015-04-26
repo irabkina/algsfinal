@@ -79,7 +79,7 @@ public class Graph {
 		this.numVertices = numVertices;
 	}
 	
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		Graph test = new Graph();
 		test.setNumEdges(4);
 		test.setNumVertices(4);
@@ -120,7 +120,11 @@ public class Graph {
 //		System.out.println(testContract2.numVertices);
 //		System.out.println(testContract2.numEdges);
 //		System.out.println(testContract2.edges);ll
-	}
-
+		
+		
+		
+		
+	}*/
 }
+
 
